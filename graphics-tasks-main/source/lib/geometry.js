@@ -32,13 +32,13 @@ export function clawFinger (widthBottom, widthTop, height, depth) {
      halfWidthT, halfHeight, halfDepth,
     -halfWidthT, halfHeight, halfDepth,
 
-    // Front Face
+    // Back Face
     -halfWidthB, -halfHeight, -halfDepth,
      halfWidthB, -halfHeight, -halfDepth,
      halfWidthT,  halfHeight, 0,
     -halfWidthT,  halfHeight, 0,
 
-    // Back Face
+    // Front Face
     -halfWidthB, -halfHeight, halfDepth,
      halfWidthB, -halfHeight, halfDepth,
      halfWidthT,  halfHeight, halfDepth,
@@ -68,11 +68,11 @@ export function clawFinger (widthBottom, widthTop, height, depth) {
     4, 6, 5,
     4, 7, 6,
 
-    // Front Face
+    // Back Face
     8, 10, 9,
     8, 11, 10,
 
-    // Back Face
+    // Front Face
     12, 13, 14,
     12, 14, 15,
 

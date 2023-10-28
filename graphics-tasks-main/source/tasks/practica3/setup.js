@@ -55,13 +55,12 @@ export function getResizeHandler (renderer, camera) {
  * @returns {Function} A function that renders a top-down view of the scene.
 */
 
-export function createTopDownRenderView (renderer, height = 200, cameraSize = 120, near = -300, far = 300) {
+export function createTopDownRenderView (renderer, height = 200, cameraSize = 160, near = -300, far = 300) {
 
   // Create the top camera.
   const topCamera = createTopCamera(cameraSize, height, near, far)
 
   // Adjust the view.
-  topCamera.position.set(10, 0, 0)
   topCamera.rotateOnWorldAxis(new Three.Vector3(0, 1, 0), Three.MathUtils.degToRad(-90))
 
   return (scene) => {
@@ -87,7 +86,7 @@ export default function setup (scene, renderer, mainCamera) {
   const orbitControls = getOrbitControls(renderer, mainCamera)
   const renderTopView = createTopDownRenderView(renderer)
 
-  return () => {
+  return (delta) => {
 
     renderTopView(scene)
     orbitControls.update()

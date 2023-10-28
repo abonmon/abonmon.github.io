@@ -13,7 +13,7 @@ export default defineConfig({
     // This is some kind of bug with the module export.
     mpa.default({
 
-      open: './source/tasks/practica3/index.html',
+      open: './source/tasks/practica4/index.html',
 
       scanDir: './source/tasks',
       scanFile: 'main.js'

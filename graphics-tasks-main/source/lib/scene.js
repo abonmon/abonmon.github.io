@@ -1,4 +1,5 @@
 import * as Three from 'three'
+import { normalMaterial } from './materials'
 
 /** The coordinate origin of any scene. */
 export const ORIGIN = new Three.Vector3(0, 0, 0)
@@ -38,9 +39,8 @@ function createTransform ({ position = { }, rotation = { }, scale = { } }) {
  * @returns {THREE.Mesh} The new mesh.
 */
 
-export function createMesh (geometry, transform) { 
+export function createMesh (geometry, transform, material = normalMaterial) { 
 
-  const material = new Three.MeshNormalMaterial()
   const mesh = new Three.Mesh(geometry, material)
 
   // Set the initial transform.
@@ -58,7 +58,7 @@ export function createMesh (geometry, transform) {
  * @param {Object} [initialTransform.position={}] - The initial position of the mesh.
  * @param {Object} [initialTransform.rotation={}] - The initial rotation of the mesh.
  * @param {Object} [initialTransform.scale={}] - The initial scale of the mesh.
- * @returns {Object} The created mesh object.
+ * @returns {Three.Mesh} The created mesh object.
 */
 
 export function make (geometry, initialTransform = { }) {
