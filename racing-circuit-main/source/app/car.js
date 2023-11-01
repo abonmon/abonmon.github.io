@@ -129,7 +129,7 @@ export class Car {
     this.moveTo(0)
     this.onLapCompleted = () => onRaceFinished(this.name)
 
-    this.speed = Three.MathUtils.randInt(45, 75)
+    this.speed = Three.MathUtils.randInt(40, 70)
     this.moveCheckbox.setValue(true)
     this.moveCheckbox.disable()
     this.positionSlider.disable()

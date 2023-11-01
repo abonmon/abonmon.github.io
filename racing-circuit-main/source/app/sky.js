@@ -79,8 +79,8 @@ export class AnimatedSky extends Sky {
     this.sunLight.shadow.camera.far = 800
 
     // Increase shadow map resolution
-    this.sunLight.shadow.mapSize.width = 2048
-    this.sunLight.shadow.mapSize.height = 2048
+    this.sunLight.shadow.mapSize.width = 8192
+    this.sunLight.shadow.mapSize.height = 8192
 
     // Add a bias to remove shadow artifacts
     this.sunLight.shadow.bias = -0.00075

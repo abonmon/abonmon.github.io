@@ -13,7 +13,7 @@ export const CIRCUIT_MODEL = '/models/Circuit.glb'
 export const GROUND_TEXTURE = '/textures/ground.png'
 
 /** The default speed of the cars. */
-export const DEFAULT_CAR_SPEED = 50
+export const DEFAULT_CAR_SPEED = 45
 
 /** The data for the 'Car 1' model. */
 export const CAR_1_DATA = {
